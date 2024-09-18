@@ -16,21 +16,21 @@ public class InputHandler : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.S))
             {
-                ICommand moveForward = new MoveCommand(transform, Vector3.back);
-                moveForward.Execute();
-                commandHistory.Push(moveForward);
+                ICommand moveBackward = new MoveCommand(transform, Vector3.back);
+                moveBackward.Execute();
+                commandHistory.Push(moveBackward);
             }
             if (Input.GetKeyDown(KeyCode.A))
             {
-                ICommand moveForward = new MoveCommand(transform, Vector3.left);
-                moveForward.Execute();
-                commandHistory.Push(moveForward);
+                ICommand toTheLeft = new MoveCommand(transform, Vector3.left);
+            toTheLeft.Execute();
+                commandHistory.Push(toTheLeft);
             }
             if (Input.GetKeyDown(KeyCode.D))
             {
-                ICommand moveForward = new MoveCommand(transform, Vector3.right);
-                moveForward.Execute();
-                commandHistory.Push(moveForward);
+                ICommand toTheRight= new MoveCommand(transform, Vector3.right);
+                toTheRight.Execute();
+                commandHistory.Push(toTheRight);
             }
 
             if (Input.GetKeyDown(KeyCode.Z) && commandHistory.Count > 0)
