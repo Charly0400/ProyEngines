@@ -27,10 +27,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void PlaySound(AudioClip clip)
-    {
-        music.PlayOneShot(clip);
-    }
+
 
     private void MuteMusic()
     {
