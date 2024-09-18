@@ -8,7 +8,7 @@ public class Observer : MonoBehaviour
     public static UnityEvent onLog = new UnityEvent();
 
     private void Start()
-    {
+    {  
         StartCoroutine("Log");
     }
 
